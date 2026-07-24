@@ -1,0 +1,22 @@
+{
+  "name": "botanary-contract",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "hardhat compile",
+    "test": "hardhat test",
+    "test:ci": "hardhat compile --force && hardhat test",
+    "lint": "solhint 'contracts/**/*.sol'",
+    "node": "hardhat node"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/chai": "^4.3.20",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^22.13.0",
+    "hardhat": "^2.29.0",
+    "solhint": "^5.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.8.0"
+  }
+}

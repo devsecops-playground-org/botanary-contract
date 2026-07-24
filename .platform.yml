@@ -1,0 +1,16 @@
+# Contracts are built, linted and tested like everything else, but they are not
+# deployed by CI — publishing bytecode to a chain is a deliberate, separate act.
+project: botanary
+component: contract
+type: contract
+runtime: node
+package_manager: npm
+
+test:
+  command: npm run test:ci
+  lint: npm run lint
+  coverage_min: 0
+  ai_review: true
+
+deploy:
+  target: none

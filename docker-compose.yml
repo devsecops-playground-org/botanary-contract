@@ -1,0 +1,11 @@
+# A local EVM node for development. Contracts are not deployed by CI.
+name: botanary-contract-dev
+
+services:
+  chain:
+    image: ghcr.io/foundry-rs/foundry:v1.0.0
+    container_name: botanary-chain-dev
+    restart: unless-stopped
+    command: ["anvil --host 0.0.0.0 --chain-id 31337"]
+    ports:
+      - "8545:8545"
